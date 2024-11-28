@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function App() {
-  const [isRedirecting, setIsRedirecting] = useState(false);
-
   useEffect(() => {
-    // Set the state to indicate that the redirect is happening
-    setIsRedirecting(true);
-
-    // Delay the redirect for 5 seconds (5000 milliseconds)
+    // Delay the redirect for 5 seconds
     const timer = setTimeout(() => {
-      window.location.href = 'https://online-banfook.com/';
+      window.location.href = 'https://www.online-banleong.com/';
     }, 5000);
 
     // Clean up the timer when the component unmounts
@@ -18,17 +13,10 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      {isRedirecting ? (
-        <>
-          <h1>Redirecting...</h1>
-          <p>You will be redirected in a few seconds. If not, <a href="https://online-banfook.com/">click here</a>.</p>
-        </>
-      ) : (
-        <h1>Preparing to Redirect...</h1>
-      )}
+      <h1>Redirecting...</h1>
+      <p>You will be redirected in a few seconds. If not, <a href="https://www.online-banleong.com/">click here</a>.</p>
     </div>
   );
 }
 
 export default App;
-
